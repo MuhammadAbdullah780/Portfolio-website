@@ -1,0 +1,68 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply text-xs small-mobile:text-base;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @apply hover:text-txt-light font-bold text-lg text-white;
+}
+
+.section-heading {
+  @apply text-2xl;
+}
+
+.section-title {
+  @apply text-fg-primary;
+}
+
+p,
+span,
+div {
+  @apply text-txt-light;
+}
+
+.link {
+  @apply cursor-pointer font-semibold active:scale-95 hover:text-txt-light text-txt-dark;
+}
+
+.nav-link {
+  @apply cursor-pointer font-semibold active:scale-95 hover:text-txt-dark text-black;
+}
+
+
+button,
+a {
+  @apply active:scale-95;
+}
+
+.input {
+  @apply placeholder:text-base placeholder:select-none border-0 p-2 rounded-md outline-none w-full small-mobile:w-[90%] bg-gray-100;
+}
+
+.textarea {
+  @apply border-none outline-none p-2 rounded-md bg-gray-100 w-full small-mobile:w-[90%];
+}
+
+body::-webkit-scrollbar {
+  width: 0.5rem;
+  box-shadow: 8px;
+}
+
+body::-webkit-scrollbar-track {
+  background-color: #64748b;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #cddcf9;
+  width: 0.6rem;
+  border-radius: 16px;
+  outline: 1px solid #64748b;
+}
