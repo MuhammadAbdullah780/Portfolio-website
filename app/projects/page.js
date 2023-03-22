@@ -7,7 +7,7 @@ export const metadata = {
 }
 
 async function page() {
-  const { data } = await getProjects()
+  const data = await getProjects()
   return (
     <PageWrapper>
       <WorkSection projects={data} />

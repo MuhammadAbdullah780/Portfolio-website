@@ -11,7 +11,7 @@ export const metadata = {
 }
 
 async function page() {
-  const { user } = await getUser();
+  const user = await getUser();
   return (
     <PageWrapper>
       <FlexColumn className="gap-5">

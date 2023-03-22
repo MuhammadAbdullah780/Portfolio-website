@@ -9,7 +9,9 @@ export async function GET(req, res) {
       ...doc.data(),
       id: doc.id,
     }));
-    return NextResponse.json({ data:projectData });
+    return NextResponse.json(projectData,{ 
+      status:200,
+    })
   } catch(err) {
     NextResponse.error({
       msg:err.message

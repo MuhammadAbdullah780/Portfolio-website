@@ -7,10 +7,10 @@ export const metadata = {
 }
 
 async function page() {
-  const skills = await getSkills();
+  const data = await getSkills();
   return (
     <PageWrapper>
-      <Skills skills={skills?.data} />
+      <Skills skills={data} />
     </PageWrapper>
   );
 }
