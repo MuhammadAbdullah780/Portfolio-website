@@ -1,7 +1,6 @@
 "use client";
 import React from "react";
 import Button from "../Button";
-import FlexBetween from "../FlexBetween";
 import FlexColumn from "../FlexColumn";
 import SectionHeading from "../SectionHeading";
 import SocialIconDiv from "../SocialIconDiv";
@@ -12,7 +11,7 @@ const ContactSection = ({ links }) => {
       <SectionHeading text="Me" coloredText="Contact" />
       <p>Here are the some Links through which you can Contact Me.</p>
       <SocialIconDiv links={links} />
-      <Button Text="Hire Me" href={`mailto:${links.mobileNo}`} />
+      <Button Text="Hire Me" href={`mailto:${links?.mobileNo}`} />
     </FlexColumn>
   );
 };

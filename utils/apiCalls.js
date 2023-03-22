@@ -1,3 +1,5 @@
+
+
 export async function getSkills() {
   const res = await fetch(`${process.env.HOST_URL}/api/getskills`, {
     next: { revalidate: 3600 * 24 * 7 },
@@ -21,4 +23,6 @@ export async function getUser() {
     const data = await res.json();
     return data;
   }
+  // portfolio-website-6vhxetfxa-muhammadabdullah780.vercel.app
+  // portfolio-website-6vhxetfxa-muhammadabdullah780.vercel.app
   

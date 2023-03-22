@@ -12,7 +12,7 @@ const Skills = ({ skills }) => {
         {
           skills?.map((skill) => {
             return (
-              <SkillsSetInfo key={skill.id}  skill={skill}  />
+              <SkillsSetInfo key={skill?.id}  skill={skill}  />
             )
           })
         }

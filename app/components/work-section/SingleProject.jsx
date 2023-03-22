@@ -4,7 +4,7 @@ import React from "react";
 import Button from "../Button";
 import FlexBetween from "../FlexBetween";
 import FlexColumn from "../FlexColumn";
-import { AnimatePresence, motion } from "framer-motion";
+import { motion } from "framer-motion";
 
 const SingleProject = ({ project }) => {
   return (
@@ -18,7 +18,7 @@ const SingleProject = ({ project }) => {
       <FlexBetween className="flex-col lg:flex-row w-full bg-bg-primary rounded-md">
         {/* IMG */}
         <Image
-          src={project.image}
+          src={project?.image}
           alt="name"
           loading="lazy"
           className="m-auto"
@@ -28,15 +28,15 @@ const SingleProject = ({ project }) => {
         {/* DETAILS */}
         <FlexColumn className="py-4 px-3 !items-start">
           {/* HEADING */}
-          <h4 className="p-3">{project.name}</h4>
+          <h4 className="p-3">{project?.name}</h4>
           {/* PARA */}
-          <p className="p-3">{project.description}</p>
+          <p className="p-3">{project?.description}</p>
           <FlexBetween className="gap-3">
             {/* BUTTONS */}
-            <Button Text="View Site" href={project.siteLink} target="_blank" />
+            <Button Text="View Site" href={project?.siteLink} target="_blank" />
             <Button
               Text="View Code"
-              href={project.githubLink}
+              href={project?.githubLink}
               target="_blank"
             />
           </FlexBetween>

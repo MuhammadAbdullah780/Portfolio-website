@@ -10,7 +10,7 @@ const WorkSection = ({ projects }) => {
       <SectionHeading text="My" coloredText="Projects" orientation="revert" />
       {/* PROJECT DIV'S */}
       {projects?.map((project) => {
-        return <SingleProject project={project} key={project.id} />;
+        return <SingleProject project={project} key={project?.id} />;
       })}
     </FlexColumn>
   );

@@ -4,7 +4,7 @@ import React from "react";
 import FlexBetween from "../FlexBetween";
 import Typewriter from "typewriter-effect";
 import Button from "../Button";
-import { AnimatePresence, motion } from "framer-motion";
+import { motion } from "framer-motion";
 
 const UserInfo = ({ user }) => {
   return (
@@ -18,14 +18,14 @@ const UserInfo = ({ user }) => {
         <h4>Hello I'm </h4>
         <h1>
           <span className="text-fg-primary font-bold text-2xl">
-            {user.name}
+            {user?.name}
           </span>
         </h1>
         <h4 className="flex gap-2">
           <span>A</span>
           <Typewriter
             options={{
-              strings: user.workPositions,
+              strings: user?.workPositions,
               autoStart: true,
               loop: true,
               cursorClassName: "text-fg-primary",
@@ -33,7 +33,7 @@ const UserInfo = ({ user }) => {
           />
         </h4>
         <div className="py-4 flex gap-4 ">
-          <Button Text="Hire Me" href={`mailto:${user.email}`} />
+          <Button Text="Hire Me" href={`mailto:${user?.email}`} />
           <Button Text="My CV" href="CV.pdf" download />
         </div>
       </motion.div>
@@ -41,9 +41,9 @@ const UserInfo = ({ user }) => {
         className="m-auto bg-fg-primary rounded flex-shrink-0 p-4"
       >
         <Image
-          src={user.image}
+          src={user?.image}
           loading="lazy"
-          alt={user.name}
+          alt={user?.name}
           placeholder="empty"
           className="-z-10"
           height={300}
