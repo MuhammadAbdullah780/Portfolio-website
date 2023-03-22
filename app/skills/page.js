@@ -10,7 +10,7 @@ async function page() {
   const skills = await getSkills();
   return (
     <PageWrapper>
-      <Skills skills={skills.data} />
+      <Skills skills={skills?.data} />
     </PageWrapper>
   );
 }
