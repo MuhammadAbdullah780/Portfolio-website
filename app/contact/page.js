@@ -11,9 +11,10 @@ async function page() {
   const { user } = await getUser()
   return (
     <PageWrapper>
-      <ContactSection links={user[0].links} />
+      <ContactSection links={user?.links} />
     </PageWrapper>
   );
 }
 
 export default page;
+

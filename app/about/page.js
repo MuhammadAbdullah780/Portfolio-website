@@ -15,9 +15,9 @@ async function page() {
   return (
     <PageWrapper>
       <FlexColumn className="gap-5">
-        <UserInfo user={user[0]} />
-        <AboutUs user={user[0]} />
-        <SocialIconDiv links={user[0].links} />
+        <UserInfo user={user} />
+        <AboutUs user={user} />
+        <SocialIconDiv links={user?.links} />
       </FlexColumn>
     </PageWrapper>
   );

@@ -23,6 +23,3 @@ export async function getUser() {
     const data = await res.json();
     return data;
   }
-  // portfolio-website-6vhxetfxa-muhammadabdullah780.vercel.app
-  // portfolio-website-6vhxetfxa-muhammadabdullah780.vercel.app
-  

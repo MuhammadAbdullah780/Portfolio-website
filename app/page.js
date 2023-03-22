@@ -22,11 +22,11 @@ export default async function Home() {
     <>
       <PageWrapper>
         <FlexColumn className="gap-5">
-          <UserInfo user={result[0].user[0]} />
-          <AboutUs user={result[0].user[0]} />
+          <UserInfo user={result[0].user} />
+          <AboutUs user={result[0].user} />
           <Skills skills={result[2].data} />
           <WorkSection projects={result[1].data} />
-          <ContactSection links={result[0].user[0].links} />
+          <ContactSection links={result[0].user?.links} />
         </FlexColumn>
       </PageWrapper>
     </>

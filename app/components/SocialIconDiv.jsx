@@ -10,35 +10,35 @@ import SocialLink from "./SocialLink";
 const SocialIconDiv = ({ links }) => {
   return (
     <div className="flex items-start gap-4 flex-wrap">
-      <SocialLink href={`tel:${links.mobileNo}`}>
+      <SocialLink href={`tel:${links?.mobileNo}`}>
         <IoMdCall />
       </SocialLink>
       <SocialLink
-        href={links.facebook}
+        href={links?.facebook}
         target="_blank"
       >
         <FaFacebookF />
       </SocialLink>
       <SocialLink
-        href={links.instagram}
+        href={links?.instagram}
         target="_blank"
       >
         <RiInstagramFill />
       </SocialLink>
       <SocialLink
-        href={links.linkedIn}
+        href={links?.linkedIn}
         target="_blank"
       >
         <FaLinkedinIn />
       </SocialLink>
-      <SocialLink href={links.twitter} target="_blank">
+      <SocialLink href={links?.twitter} target="_blank">
         <BsTwitter />
       </SocialLink>
-      <SocialLink href={`sms:${links.mobileNo}`}>
+      <SocialLink href={`sms:${links?.mobileNo}`}>
         <BiMessageAltDetail />
       </SocialLink>
       <SocialLink
-        href={links.github}
+        href={links?.github}
         target="_blank"
         className="h-10 w-10 flex items-center justify-center rounded-full hover:text-gray-800 bg-bg-primary hover:bg-fg-primary"
       >
