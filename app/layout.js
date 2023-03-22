@@ -2,7 +2,6 @@ import "../styles/global.css";
 import NavBar from "./components/navbar/NavBar";
 import { Poppins } from "next/font/google";
 import Footer from "./components/footer/Footer";
-import { AnimatePresence } from "framer-motion";
 
 const fontPoppins = Poppins({
   weight: "200",
@@ -31,7 +30,7 @@ export default function RootLayout({ children }) {
         <header>
           <NavBar />
         </header>
-        <AnimatePresence mode="wait">{children}</AnimatePresence>
+        {children}
         <Footer />
       </body>
     </html>
