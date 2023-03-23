@@ -1,4 +1,4 @@
-import { getUser } from "@/utils/apiCalls";
+import { getUser } from "../apiCalls";
 import AboutUs from "../components/about-section/AboutUs";
 import UserInfo from "../components/about-section/UserInfo";
 import FlexColumn from "../components/FlexColumn";
@@ -10,7 +10,7 @@ export const metadata = {
   title:'About | Portfolio',
 }
 
-async function page() {
+export default async function page() {
   const user = await getUser();
   return (
     <PageWrapper>
@@ -22,5 +22,3 @@ async function page() {
     </PageWrapper>
   );
 }
-
-export default page;

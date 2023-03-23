@@ -4,8 +4,8 @@ import FlexColumn from "./components/FlexColumn";
 import Skills from "./components/about-section/Skills";
 import WorkSection from "./components/work-section/WorkSection";
 import ContactSection from "./components/contact-section/ContactSection";
-import { getProjects, getSkills, getUser } from "@/utils/apiCalls";
 import PageWrapper from "./components/PageWrapper";
+import { getUser, getSkills, getProjects } from "./apiCalls";
 
 export const metadata = {
   title:'Portfolio Website',

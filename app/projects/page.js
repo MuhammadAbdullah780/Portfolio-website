@@ -1,12 +1,12 @@
 import WorkSection from "../components/work-section/WorkSection";
-import { getProjects } from "@/utils/apiCalls";
 import PageWrapper from "../components/PageWrapper";
+import { getProjects } from "../apiCalls";
 
 export const metadata = {
   title:'Projects | Portfolio',
 }
 
-async function page() {
+export default async function page() {
   const data = await getProjects()
   return (
     <PageWrapper>
@@ -15,4 +15,3 @@ async function page() {
   );
 }
 
-export default page;

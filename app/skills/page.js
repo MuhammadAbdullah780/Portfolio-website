@@ -1,4 +1,4 @@
-import { getSkills } from "@/utils/apiCalls";
+import { getSkills } from "../apiCalls";
 import Skills from "../components/about-section/Skills";
 import PageWrapper from "../components/PageWrapper";
 
@@ -6,7 +6,7 @@ export const metadata = {
   title:'Skills | Portfolio',
 }
 
-async function page() {
+export default async function page() {
   const data = await getSkills();
   return (
     <PageWrapper>
@@ -14,5 +14,3 @@ async function page() {
     </PageWrapper>
   );
 }
-
-export default page;
