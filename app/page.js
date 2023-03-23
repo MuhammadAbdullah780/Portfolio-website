@@ -11,11 +11,38 @@ export const metadata = {
   title:'Portfolio Website',
 }
 
+export async function getSkillsData() {
+  try {
+    const res = await getSkills();
+    return res;
+  } catch (err) {
+    console.log(err);
+  }
+}
+
+export async function getProjectsData() {
+  try {
+    const res = await getProjects();
+    return res;
+  } catch (err) {
+    console.log(err);
+  }
+}
+
+export async function getUserData() {
+  try {
+    const res = await getUser();
+    return res;
+  } catch (err) {
+    console.log(err);
+  }
+}
+
 
 export default async function Home() {
-  const user = getUser();
-  const projects = getProjects();
-  const skills = getSkills();
+  const user = getUserData();
+  const projects = getProjectsData();
+  const skills = getSkillsData();
   const result = await Promise.all([user, projects, skills]);
 
   return (

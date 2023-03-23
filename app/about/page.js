@@ -10,8 +10,17 @@ export const metadata = {
   title:'About | Portfolio',
 }
 
+export async function getUserData() {
+  try {
+    const res = await getUser();
+    return res;
+  } catch (err) {
+    console.log(err);
+  }
+}
+
 export default async function page() {
-  const user = await getUser();
+  const user = await getUserData();
   return (
     <PageWrapper>
       <FlexColumn className="gap-5">

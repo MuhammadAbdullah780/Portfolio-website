@@ -6,8 +6,17 @@ export const metadata = {
   title:'Projects | Portfolio',
 }
 
+export async function getProjectsData() {
+  try {
+    const res = await getProjects();
+    return res;
+  } catch (err) {
+    console.log(err);
+  }
+}
+
 export default async function page() {
-  const data = await getProjects()
+  const data = await getProjectsData()
   return (
     <PageWrapper>
       <WorkSection projects={data} />
